@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Character.css';
+import Spinner from './Spinner';
 
 
 
@@ -26,11 +27,11 @@ export default function Character(props) {
 	},[props.item.name]);
 
 	return (
-		isLoading ? (<h1>Wait...</h1>):(<div className="wrap">
+		isLoading ? (<h1><Spinner/></h1>):(<div className="wrap">
 			<div className="background">
 				<div className="left">
 				<div className="wrap-container">
-					<h2>Name: {props.item.name}</h2>
+					<h2 className="name-title">Name: {props.item.name}</h2>
 					<p>Occupations: {props.item.occupation}</p>
 					<p>DOB: {props.item.birthday}</p>
 					<p>Status: {props.item.status}</p>

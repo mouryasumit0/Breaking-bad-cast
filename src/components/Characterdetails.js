@@ -21,19 +21,19 @@ const Characterdetails = props => {
       setFilterItem(characters);
       
     }
-
+    console.log(filterItem);
     fetchItems();
   },[query]);
 
   
-  return (
-    <div>
+  return ( filterItem.length===0 ? (<div style={{width: '200px', margin: 'auto'}}>Character not available</div>):(<div>
+  
   <Link  to='/'>
   <button className="btn-home">back to home</button>
   </Link>
   {filterItem.map((item) => (
     <Character key = {item.char_id} item = {item}/>
     ))}
-  </div>)
+  </div>))
 }
 export default Characterdetails

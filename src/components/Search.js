@@ -28,7 +28,7 @@ const Search = ({ getQuery }) => {
 			autoFocus
 			onChange={(e) => setText(e.target.value)}
 			/>
-			<Link to={`/character/${text}`}>
+			<Link to={`/${text}`}>
 				<button className="btn" type="submit">Search</button>
 			</Link>
 		</form>

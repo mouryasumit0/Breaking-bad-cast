@@ -1,6 +1,6 @@
   import React, { useState, useEffect } from 'react';
   import './App.css';
-  import Header from './components/Header';
+  import Header from './components/Header'; 
   import Characters from './components/Characters';
   import Search from './components/Search';
   import Characterdetails from './components/Characterdetails';
@@ -48,7 +48,7 @@
               </>)
               }}>
           </Route>
-          <Route path="/character/:query" children = {<Characterdetails items={items}/>} >
+          <Route path="/:query" children = {<Characterdetails items={items}/>} >
           </Route>
         </Switch>
 

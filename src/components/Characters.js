@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import CharacterItem from './CharacterItem';
+import CharacterItem from './CharacterItem'; 
+import Spinner from './Spinner'
 
 import './Characters.css';
 
@@ -19,7 +20,7 @@ const Characters = ({ items, isLoading}) => {
 		})
 	};
 
-	return isLoading ? (<div className="title"><h1>Loading...</h1></div>
+	return isLoading ? (<div className="title"><Spinner/></div>
 		) : ( <div className="wrapper">
 		<div ref={ref} className="container">
 		<button className="slide-left" type="button" onClick={() => scrollLeft()}><span>&lt;</span></button>

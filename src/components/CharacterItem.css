@@ -1,5 +1,5 @@
 .item {
-	background: green;
+
 	flex: 0 0 19.7%;
 	margin: 0 ;
 	transition: transform 300ms ease 100ms;
@@ -29,7 +29,6 @@
 	max-width: 250px;
 	height: 400px;
 	transition: .5s ease;
-	backface-visibility: hidden;
 	margin-bottom: 0;
 	padding: 0;
 }
