@@ -1,0 +1,43 @@
+.item {
+	background: green;
+	flex: 0 0 19.7%;
+	margin: 0 ;
+	transition: transform 300ms ease 100ms;
+	position: relative;
+}
+
+
+.content {
+	font-family: 'Poppins', sans-serif;
+	transition: .5s ease;
+	opacity: 0;
+	max-width: 200px;
+	max-height: 400px;
+	position: relative;
+	bottom: 200px;
+	left: 125px;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+}
+
+.image {
+	opacity: 1;
+	display: block;
+	min-width: 250px;
+	max-width: 250px;
+	height: 400px;
+	transition: .5s ease;
+	backface-visibility: hidden;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.item:hover .content{
+	opacity: 1;
+}
+
+.item:hover .image{
+	opacity: 0.5;
+}

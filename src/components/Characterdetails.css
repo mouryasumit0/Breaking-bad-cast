@@ -1,0 +1,12 @@
+.btn-home {
+	background-image: linear-gradient(to left top, #032202, #0e3c19, #1c572c, #297540, #369457);
+	position: fixed;
+	color: white;
+	border: none;
+	border-radius: 1rem;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+}

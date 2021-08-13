@@ -1,0 +1,50 @@
+
+.wrap {
+  height: 100vh;
+  position: relative;
+}
+
+.background {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  background: black;
+  width: 40%;
+  position: relative;
+}
+
+.left:before {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(to right,#000,transparent);
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 275px;
+}
+
+.right {
+  background: green;
+  width: 60%;
+  background: cover;
+}
+
+.wrap-container {
+	margin: 10px;
+	text-align: center;
+  font-family: inherit;
+  overflow: auto;
+  max-height: 98vh;
+
+}
+
+.wrap-container::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}

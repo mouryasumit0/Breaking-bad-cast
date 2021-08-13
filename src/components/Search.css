@@ -1,0 +1,22 @@
+.title {
+	margin: 1rem;
+}
+
+.form-control {
+	border: none;
+	padding: 0.5rem;
+	margin: 0.5rem;
+}
+
+.btn {
+	padding: 0.4rem;
+	background-image: linear-gradient(to left top, #032202, #0e3c19, #1c572c, #297540, #369457);
+	border-radius: 0.25rem;
+	color: white;
+}
+
+@media (max-width: 700px){
+	.btn {
+		display: none;
+	}
+}
