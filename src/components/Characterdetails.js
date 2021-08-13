@@ -23,7 +23,7 @@ const Characterdetails = props => {
     }
     console.log(filterItem);
     fetchItems();
-  },[query]);
+  },[filterItem,query]);
 
   
   return ( filterItem.length===0 ? (<div style={{width: '200px', margin: 'auto'}}>Character not available</div>):(<div>
