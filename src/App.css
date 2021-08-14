@@ -16,13 +16,15 @@ body {
 	scroll-behavior: smooth;
 }
 
-.heading {
+
+
+@media (min-width: 500px){
+	.heading {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-
-
+}
 
 
 

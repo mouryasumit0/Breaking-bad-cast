@@ -24,7 +24,7 @@ const Characterdetails = props => {
   },[name]);
 
   
-  return (isLoading ? (<h1>wait..</h1>) : ( filterItem.length===0 ? (<div style={{width: '200px', margin: 'auto'}}><h1>Character not available</h1> <Link  to='/'>
+  return (isLoading ? (<h1>wait...</h1>) : ( filterItem.length===0 ? (<div style={{width: '200px', margin: '0 auto'}}><h1>Character not available</h1> <Link  to='/'>
   <button className="btn-home">back to home</button>
   </Link></div>):(<div>
   
