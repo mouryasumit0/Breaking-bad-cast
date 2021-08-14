@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const CharacterItem = (props) => {
 return (
 	<div className="item">
-		<Link className="itemL" to={`/${props.item.name}` }>
+		<Link className="itemL" to={`/${props.item.name.replace(/\s+/g, "+")}` }>
 		<img src={props.item.img} className="image" alt=""  height="300px"/>
 		
 	<div className="content" id={props.item.char_id}>

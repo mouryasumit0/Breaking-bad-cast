@@ -5,35 +5,35 @@ import { Link } from 'react-router-dom';
 import './Characterdetails.css'
 
 const Characterdetails = props => { 
-  let { query } = useParams();
+  let { name } = useParams();
 
-  const [filterItem, setFilterItem] = useState([]);
+  const [filterItem, setFilterItem] = useState(() => []);
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch(`https://www.breakingbadapi.com/api/characters?name=${query}`);
+      setIsLoading(true);
+      const response = await fetch(`https://www.breakingbadapi.com/api/characters?name=${name}`);
       const responseData = await response.json();
-      var characters = [];
-
-      for (var i = responseData.length - 1; i >= 0; i--) {
-        characters[i] = responseData[i]
-      }
-      setFilterItem(characters);
+      setFilterItem(responseData);
+      setIsLoading(false);
+      console.log(responseData)
       
     }
-    console.log(filterItem);
     fetchItems();
-  },[filterItem,query]);
+  },[name]);
 
   
-  return ( filterItem.length===0 ? (<div style={{width: '200px', margin: 'auto'}}>Character not available</div>):(<div>
+  return (isLoading ? (<h1>wait..</h1>) : ( filterItem.length===0 ? (<div style={{width: '200px', margin: 'auto'}}><h1>Character not available</h1> <Link  to='/'>
+  <button className="btn-home">back to home</button>
+  </Link></div>):(<div>
   
   <Link  to='/'>
   <button className="btn-home">back to home</button>
   </Link>
-  {filterItem.map((item) => (
-    <Character key = {item.char_id} item = {item}/>
+  {filterItem.map(item => (
+    <Character key = {item.char_id} item = {item} isLoading={isLoading}/>
     ))}
-  </div>))
+  </div>)))
 }
 export default Characterdetails

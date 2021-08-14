@@ -11,14 +11,10 @@ export default function Character(props) {
 
 	useEffect(() => {
 		const fetchItems = async () => {
+			setIsLoading(true);
 			const response = await fetch(`https://www.breakingbadapi.com/api/quote?author=${props.item.name}`);
 			const responseData = await response.json();
-			var characters = [];
-
-			for (var i = responseData.length - 1; i >= 0; i--) {
-				characters[i] = responseData[i]
-			}
-			setQuotes(characters);
+			setQuotes(responseData);
 			setIsLoading(false);
 
 		}
